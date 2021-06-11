@@ -1,13 +1,24 @@
 <div class="container text-center">
   <br><br> <br><br>
+  <form #loginform="ngForm"> 
+ <small class="text-white">{{msg}} </small>
+ 
   <mat-form-field>
-    <input matInput placeholder="Username" class="mt-2" name="username" [(ngModel)]="username">
+    <input type="text" matInput placeholder="Username" class="mt-2" name="username" [(ngModel)]="username" required>
   </mat-form-field>
+
   <br><br>
+
   <mat-form-field>
-    <input matInput placeholder="Senha" class="mt-2" name="password" [(ngModel)]="password">
+    <input type="password" matInput placeholder="Senha" class="mt-2" name="password" [(ngModel)]="password" 
+    required #senha="ngModel" [class.is-invalid]="senha.invalid && senha.touched"
+    >
   </mat-form-field>
-  <br><br> <br><br>
+  <br>
+  <small class="text-white" [class.d-none]="senha.valid || senha.untouched">Senha é requerida</small>
+  <br>
+
+  <br>
   <button class="btn login text-white mt-3" (click)=checkLogin()>
     LOGIN
   </button>
@@ -16,4 +27,5 @@
   <button class="btn btn2 text-white" [routerLink]="['/registration']">
     New User? Let's go!
   </button>
+  </form>
 </div>
