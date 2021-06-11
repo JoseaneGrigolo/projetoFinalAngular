@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/service/authentication.service';
 import { PostCrudService } from '../postCrud/post-crud.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
   username = ''
   password = ''
   invalidLogin = false
-
+  msg="";
   constructor(private router: Router,
     private loginservice: AuthenticationService, postCrudService: PostCrudService) { }
 
@@ -28,7 +29,9 @@ export class LoginComponent implements OnInit {
         this.invalidLogin = false
       },
       error => {
-        this.invalidLogin = true
+        this.invalidLogin = true;
+        this.msg="Digite username e senha válidos";
+
       }
     )
     );
