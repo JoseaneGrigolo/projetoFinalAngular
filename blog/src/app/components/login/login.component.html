@@ -1,0 +1,19 @@
+<div class="container text-center">
+  <br><br> <br><br>
+  <mat-form-field>
+    <input matInput placeholder="Username" class="mt-2" name="username" [(ngModel)]="username">
+  </mat-form-field>
+  <br><br>
+  <mat-form-field>
+    <input matInput placeholder="Senha" class="mt-2" name="password" [(ngModel)]="password">
+  </mat-form-field>
+  <br><br> <br><br>
+  <button class="btn login text-white mt-3" (click)=checkLogin()>
+    LOGIN
+  </button>
+
+  <br><br><br>
+  <button class="btn btn2 text-white" [routerLink]="['/registration']">
+    New User? Let's go!
+  </button>
+</div>

@@ -1,0 +1,36 @@
+.sidenav {
+  background-color: rgb(243, 242, 247);
+  width: 180px;
+   
+}
+
+.sidenav a {
+  color: black;
+  font-size: 18px;
+}
+
+.sidenav a:hover {
+  background-color: rgb(118, 124, 199);
+  color: #fff;
+}
+
+.sidenav i {
+  padding-right: 10px;
+}
+
+.content {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  
+}
+
+.mat-drawer-container {
+  display:inline;
+}
+
+.logob{
+  height: 170px;
+  position: absolute;
+  bottom:0;
+}

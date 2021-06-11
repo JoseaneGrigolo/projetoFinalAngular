@@ -1,0 +1,46 @@
+table {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgb(171, 173, 211);
+  text-align: center;
+}
+.delete > i {
+  color: rgb(175, 65, 65);
+}
+.delete {
+  cursor: pointer;
+}
+.home .title {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+.home {
+  background-color: rgb(73, 126, 168);
+  color: white;
+}
+button {
+  margin-top: 20px;
+  height: 45px;
+  color: white;
+  background-color: rgb(201, 111, 163);
+  font-size: 1.5rem;
+}
+button:hover {
+  background-color: rgb(118, 124, 199);
+  border: 2px solid white;
+}
+th {
+  color: rgb(56, 50, 92);
+  font-size: 20px;
+}
+td {
+  color: rgb(0, 14, 88);
+  font-size: 18px;
+}
+.completo i {
+  color: rgb(8, 99, 36);
+}
+.cat {
+  text-align: center;
+}

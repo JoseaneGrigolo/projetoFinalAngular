@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+
+html,
+body {
+  height: 100%;
+}
+* {
+  font-family: "Bree Serif", serif;
+}
+.red {
+  color: rgb(227, 94, 107);
+}
+.v-middle {
+  vertical-align: middle;
+}
+.mat-typography {
+  height: 725px;
+}

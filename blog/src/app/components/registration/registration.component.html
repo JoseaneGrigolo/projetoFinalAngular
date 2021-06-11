@@ -1,0 +1,27 @@
+<div class="container text-center">
+    <mat-card>
+        <mat-card-title class="mt-4">User Registration</mat-card-title>
+        <form>
+            <br><br>
+            <mat-form-field>
+                <input matInput placeholder="Email" [(ngModel)]="user.email" name="email" required>
+            </mat-form-field>
+            <br><br>
+
+            <mat-form-field>
+                <input matInput placeholder="Username" [(ngModel)]="user.username" name="username" required>
+            </mat-form-field>
+            <br><br>
+            <mat-form-field>
+                <input matInput placeholder="Senha" [(ngModel)]="user.senha" name="senha" required>
+            </mat-form-field>
+            <br><br>
+
+        </form>
+
+        <button mat-raised-button class="btn2" (click)="registro()">SAVE</button>
+        <br><br>
+        <button class="btn btn3 text-white" mat-raised-button (click)="cancel()">Existing User? Login!
+        </button>
+    </mat-card>
+</div>

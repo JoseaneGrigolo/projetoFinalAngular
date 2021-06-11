@@ -1,0 +1,25 @@
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+button {
+  margin: 20px 10px 0 0;
+}
+.atualizar {
+  background-color: rgb(201, 111, 163);
+}
+.cancelar {
+  background-color: rgb(82, 87, 151);
+}
+mat-card {
+  background-color: rgb(118, 124, 199);
+}
+mat-select {
+  height: 50px;
+  margin-top: 20px;
+  width: 150px;
+}
+mat-option {
+  background-color: rgb(118, 124, 199);
+}

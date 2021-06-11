@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(118, 124, 199);
+}
+
+mat-card {
+  background-color: rgb(118, 124, 199);
+}
+
+button {
+  margin-right: 15px;
+  margin-top: 20px;
+}
+
+input {
+  font-size: 30px;
+}
+
+.salvar {
+  background-color: rgb(201, 111, 163);
+  font-size: 20px;
+}
+.cancelar {
+  background-color: rgb(82, 87, 151);
+  font-size: 20px;
+}

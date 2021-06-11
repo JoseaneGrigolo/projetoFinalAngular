@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-image: url("../../../../assets/header-image.jpg");
+  height: 100px;
+}
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.header .title-group {
+  box-shadow: 10px 10px 10px black;
+  background-color: rgb(73, 126, 168);
+  padding-left: 25px;
+  font-size: 35px;
+  height: 50px;
+  border-radius: 10px;
+}
+.header .title-group i {
+  padding-right: 25px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.log {
+  position: absolute;
+  right: 40px;
+  box-shadow: 5px 5px 5px rgb(236, 227, 227);
+  background-color: rgb(73, 126, 168);
+  height: 70px;
+  border-radius: 10px;
+}
+
+.material-icons {
+  font-size: 40px;
+  color: white;
+}
+
+.material-icons:hover {
+  font-size: 30px;
+}

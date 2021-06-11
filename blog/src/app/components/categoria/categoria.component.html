@@ -1,0 +1,17 @@
+<mat-card>
+    <mat-card-title>
+        New Category
+    </mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Categoria" [(ngModel)]="categoria.descricao" name="categoria">
+        </mat-form-field>
+    </form>
+    <button class="salvar" mat-raised-button (click)="createCat()">
+        Save
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

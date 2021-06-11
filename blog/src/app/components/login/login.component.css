@@ -1,0 +1,30 @@
+label {
+  font-size: 20px;
+  margin-right: 10px;
+}
+input {
+  color: white;
+  font-size: 18px;
+}
+button {
+  height: 45px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.login {
+  background-color: rgb(201, 111, 163);
+}
+.btn2 {
+  background-color: rgb(118, 124, 199);
+}
+button:hover {
+  background-color: rgb(118, 124, 199);
+}
+.container {
+  border: 2px solid white;
+  height: 550px;
+  width: 400px;
+  border-radius: 30px;
+  background-image: url("../../../assets/trav2.jpg");
+}

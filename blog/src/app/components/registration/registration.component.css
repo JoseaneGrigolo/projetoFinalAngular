@@ -1,0 +1,31 @@
+mat-card {
+  height: 550px;
+  width: 400px;
+  text-align: center;
+  border-radius: 30px;
+  background-image: url("../../../assets/trav.jpg");
+}
+input {
+  height: 40px;
+  font-size: 20px;
+}
+mat-card-title {
+  font-size: 30px;
+}
+button {
+  height: 45px;
+  width: 200px;
+  font-size: 18px;
+}
+.btn2 {
+  background-color: rgb(201, 111, 163);
+}
+.btn3 {
+  background-color: rgb(118, 124, 199);
+}
+button:hover {
+  background-color: rgb(118, 124, 199);
+}
+.container {
+  width: 450px;
+}

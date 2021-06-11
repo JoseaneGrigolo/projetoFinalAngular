@@ -1,0 +1,57 @@
+<div class="mat-elevation-z8 cards">
+    <table mat-table [dataSource]="posts">
+
+
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Id</th>
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+
+        <!-- titulo Column -->
+        <ng-container matColumnDef="titulo">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Título</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.titulo}}</td>
+        </ng-container>
+
+        <!-- Categoria Column -->
+        <ng-container matColumnDef="categoria">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Categoria</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.categoria.descricao}}</td>
+        </ng-container>
+
+        <!-- Data Column -->
+        <ng-container matColumnDef="data">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Data</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.dataCriacao | date:"dd/MM/yy" }}</td>
+        </ng-container>
+
+        <!-- Likes Column -->
+        <ng-container matColumnDef="like">
+            <th class="cat" mat-header-cell *matHeaderCellDef>
+                <i class="material-icons">
+                    thumb_up_alt
+                </i>
+
+            </th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.qtdeLikes }}</td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>Visualizar</th>
+            <td mat-cell *matCellDef="let row">
+                <a (click)="postCompletoById(row.id)" class="completo">
+                    <i class="material-icons">
+                        drafts
+                    </i>
+                </a>
+
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+</div>

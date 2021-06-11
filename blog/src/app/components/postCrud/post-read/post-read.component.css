@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  margin-top: 20px;
+  background-color: rgb(171, 173, 211);
+}
+th {
+  color: rgb(56, 50, 92);
+  font-size: 20px;
+}
+td {
+  color: rgb(0, 14, 88);
+  font-size: 18px;
+}
+.completo {
+  text-align: center;
+  margin-left: 40px;
+}
+.completo i {
+  color: rgb(201, 63, 143);
+  cursor: pointer;
+}
+.cat {
+  text-align: center;
+}

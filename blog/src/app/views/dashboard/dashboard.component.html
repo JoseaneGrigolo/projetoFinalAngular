@@ -1,0 +1,73 @@
+<mat-card class="home mat-elevation-z8">
+    <mat-card-title class="title">{{sessionStorage.getItem('username') | uppercase}}'s dashboard!
+    </mat-card-title>
+</mat-card>
+
+<button mat-raiser-button (click)="navigateToProductCreate()">
+    New Post
+</button>
+
+<div class="mat-elevation-z8 cards">
+    <table mat-table [dataSource]="posts">
+
+
+        <!-- Id Column -->
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>Id</th>
+            <td mat-cell *matCellDef="let row">{{row.id}}</td>
+        </ng-container>
+
+        <!-- titulo Column -->
+        <ng-container matColumnDef="titulo">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Título</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.titulo}}</td>
+        </ng-container>
+
+        <!-- Categoria Column -->
+        <ng-container matColumnDef="categoria">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Categoria</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.categoria.descricao}}</td>
+        </ng-container>
+
+        <!-- Data Column -->
+        <ng-container matColumnDef="data">
+            <th class="cat" mat-header-cell *matHeaderCellDef>Data</th>
+            <td class="cat" mat-cell *matCellDef="let row">{{row.dataCriacao | date:"dd/MM/yy" }}</td>
+        </ng-container>
+
+        <!-- Likes Column -->
+        <ng-container matColumnDef="like">
+            <th class="cat" mat-header-cell *matHeaderCellDef>
+                <i class="material-icons">
+                    thumb_up_alt
+                </i>
+
+            </th>
+            <td class="cat" mat-cell *matCellDef="let row">{{ row.qtdeLikes }}</td>
+        </ng-container>
+
+        <!-- Action Column -->
+        <ng-container matColumnDef="action">
+            <th class="text-center" mat-header-cell *matHeaderCellDef>Ações</th>
+            <td mat-cell *matCellDef="let row">
+                <a [routerLink]="'/posts/'+ row.id + '/update'" class="completo">
+                    <i class="material-icons">
+                        edit
+                    </i>
+
+                </a>
+                <a (click)="deletePost(row.id)" class="delete">
+                    <i class="material-icons">
+                        delete
+                    </i>
+                </a>
+
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+</div>

@@ -1,0 +1,28 @@
+<mat-toolbar class="header mat-elevation-z8">
+  
+    <span class="title-group">
+        <a>
+            <i routerLink="/home" class="material-icons">
+                flight
+            </i>
+            Around the world!
+        </a>
+    </span>
+    <div class="log">
+        <nav class="navbar navbar-expand-md text-white">
+
+            <ul class="navbar-nav">
+                <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"> <i
+                            class="material-icons">
+                            settings_power
+                        </i></a></li>
+                <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link"> <i
+                            class="material-icons">
+                            power_settings_new
+                        </i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+</mat-toolbar>

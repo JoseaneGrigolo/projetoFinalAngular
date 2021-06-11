@@ -1,0 +1,31 @@
+<mat-card>
+    <mat-card-title>
+        New Post
+    </mat-card-title>
+    <form>
+
+        <mat-form-field>
+            <input matInput placeholder="Titulo" [(ngModel)]="post.titulo" name="titulo">
+        </mat-form-field>
+
+        <mat-label>Categoria</mat-label>
+
+        <mat-select [(value)]="selectedCategoria">
+            <mat-option *ngFor="let categoria of categorias" [value]="categoria.idCategoria">{{categoria.descricao}}
+            </mat-option>
+
+        </mat-select>
+
+        <mat-form-field>
+            <input matInput placeholder="Conteudo" [(ngModel)]="post.conteudo" name="conteudo">
+        </mat-form-field>
+
+    </form>
+    <button class="salvar" mat-raised-button (click)="createPost()">
+        Salvar
+    </button>
+
+    <button class="cancelar" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
