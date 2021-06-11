@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/service/authentication.service';
 import { User } from 'src/app/user';
-
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -18,6 +18,10 @@ export class RegistrationComponent implements OnInit {
     senha: ""
   }
 
+  username = ''
+  password = ''
+  invalidLogin = false
+  msg="";
   constructor(private authenticationService: AuthenticationService,
     private router: Router) { }
 
@@ -25,9 +29,17 @@ export class RegistrationComponent implements OnInit {
   }
 
   registro(): void {
-    this.authenticationService.create(this.user).subscribe(() => {
-      this.router.navigate(['/login']);
-    });
+    this.authenticationService.create(this.user).subscribe(
+       data => {
+        this.router.navigate(['/login']);
+        this.invalidLogin = false
+      },
+      error => {
+        this.invalidLogin = true;
+        this.msg="Bad CREDENTIALS";
+
+      }
+    )
   }
 
   cancel(): void {
